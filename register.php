@@ -9,7 +9,7 @@ $rname=@mysqli_real_escape_string($conn, $_REQUEST['fname']);
 
 $remail=@mysqli_real_escape_string($conn, $_REQUEST['remail']);
 $rpass=@mysqli_real_escape_string($conn, $_REQUEST['rpass']);
-
+$rzeal=@mysqli_real_escape_string($conn, $_REQUEST['rzeal']);
 
 $query1="SELECT * FROM users WHERE email='$remail'";
 $query_run1=mysqli_query($conn,$query1);
@@ -23,7 +23,7 @@ if(@mysqli_num_rows($query_run1)>0)
 }
 
 else{
-$query="insert into users values(' ','$rname','$remail','$rpass','1')";
+$query="insert into users values(' ','$rname','$remail','$rpass','$rzeal','1')";
 $query_run=@mysqli_query($conn,$query);
 $_SESSION['luser']=$remail;
 $_SESSION['lusername']=$rname;

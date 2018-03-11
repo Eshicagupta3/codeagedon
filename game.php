@@ -158,13 +158,11 @@ echo "<br><br>";
 <span class="log">&nbsp;&nbsp;<?php  echo 'hey '.$_SESSION['lusername']."  "; ?></span>
 <footer class="footer">
     <div class="text-center">
-      <span class="fa fa-trophy" data-toggle="tooltip" data-placement="top" title="Leaderboard"></span>&nbsp;<span class="fa fa-sign-out" data-toggle="tooltip" data-placement="top" title="Logout"></span>
+      <a href="leaderboard.php" style="color: white;"><span class="fa fa-trophy" data-toggle="tooltip" data-placement="top" title="Leaderboard"></span></a>&nbsp;<a href="logout.php" style="color: white;"><span class="fa fa-sign-out" data-toggle="tooltip" data-placement="top" title="Logout"></span></a>
     </div>
 </footer>
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
-});
+});*/
 </script>
-<form name="form1" action="logout.php">
-   <input type="submit" value="logout"></form>

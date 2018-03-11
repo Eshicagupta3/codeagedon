@@ -1,22 +1,11 @@
-<?php
-@session_start();
-require 'connect.php';
-if($_SESSION['luser'])
-{}
-else{
-    header('location: login.php');
-}?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/font-awesome/css<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" name="viewport" content="width=device-width, initial scale=1 shrink-to-fit=no">
+<meta charset="utf-8" name="viewport" content="width=device-width, initial scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -29,48 +18,34 @@ else{
     body,html{
       height: 100%;
       overflow-x: hidden;
-    }
-      .panel-heading1:hover, .panel-heading1:active, .panel-heading1:not([class*="collapsed"]) {
-  background-color: #5c6bc0;
-  height:60px;
-  word-spacing: 150px;
-  font-family:Pokemon Solid;
-   letter-spacing: 3px;
-}
-     .panel-heading2:hover, .panel-heading2:active, .panel-heading2:not([class*="collapsed"]) {
-  background-color:#ef9a9a;
-  height:60px;
- 
-  font-family:Pokemon Solid;
-   letter-spacing: 3px;
+        }
+
+      .panel-heading:hover, .panel-heading:active, .panel-heading:not([class*="collapsed"]) {
+      background-color: #5c6bc0;
+      height:40px;
+      font-family:Pokemon Solid;
+      padding: 0px;
 }
 
 .bg{
-    background-image: url("wallhaven-172211.jpg");
+    background-image: url("assets/images/wallhaven-172211.jpg");
     width: 100%;
     height:100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 100%;
-    position:absolute;
-    z-index:-1;
 }
-
+.heading{
+  font-family: Pokemon Solid; 
+  font-size:6em; 
+  letter-spacing: 5px;
+}
 .container{
-              width: 700px;
-              position:relative;
-              z-index:2;
-              padding-top: 0px;
-              left: 10px;
-              right: 200px; 
-            
-          }
-
+  padding-top:30px;
+}
 #shadow {
   padding: 10px;
   }
-
 #shadow:hover {
   -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
@@ -80,16 +55,15 @@ else{
   background-color: rgba(0,0,0,0.1);
 }
 .birds{
-  position: relative;
+  position:fixed;
   animation-name: bird;
   animation-duration: 25s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(30);
-  z-index:-1;
   max-height:30px;
   max-width: 70px; 
   will-change:background-position;
-  padding-top: 0px;
+  padding-top:50px;
 }
 @keyframes bird {
     0%   { left:1000px; right:0px; top:0px;}
@@ -98,21 +72,72 @@ else{
     75%  { right:750px; left: 250px; top:0px;}
     100% {left: 0px; right:2000px; top:0px;}
 }
+@media screen and (min-width: 768px) and (max-width: 969px)
+{
+  .bg{
+    background: url("assets/images/wallhaven-172211.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .birds{
+    padding-top: 40px;
+    position: fixed;
+  }
+  .heading{
+    font-size: 6em;
+    letter-spacing: 5px;
+     margin: 0 2%;
+  }
+  
+}
+@media screen and (min-width: 100px) and (max-width: 768px){
+  .bg{
+    background: url("assets/images/wallhaven-172211.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .birds{
+    padding:10px;
+    position: fixed;
+  }
+  .heading{
+    font-size: 5em;
+    letter-spacing: 5px;
+    margin: 0 2%;
+  }
+}
+.row{
+  width: 110%;
+}
+.colo{
+  display: inline-block;
+  width: 30%;
+  margin: 0 2% 0 2%;
+}
 
 </style>
 </head>
-<body>
+<body class="bg">
 
-<div class="bg"></div>
-
-<h1 align="center" style="font-family: Pokemon Solid; font-size: 70px; letter-spacing: 5px">Leaderboard</h1>
+<h1 align="center" class="heading" >Leaderboard</h1>
 <div class="birds"> <img src="assets/images/bird.gif"></div>
 <div class="container">
-
-    <div class="panel panel-default ">
-      <div class="panel-heading1" id="shadow" style="font-size: 20px;"><span>Name Position Zeal_id</span> </div>
+<div class="row">
+<div class="col-sm-1 col-xs-2"></div>
+<div class="col-sm-8 col-xs-4">
+<div class="row">
+<div class="col-sm-1 col-xs-1"></div>
+<div class="col-sm-11 col-xs-11">
+  <div class="panel panel-default ">
+      <div class="panel-heading" id="shadow">
+      <div class="row">
+        <div class="colo">NAME </div>
+        <div class="colo">ZEALID</div>
+        <div class="colo" style="margin-right: 0;">POSITION</div>
      </div>
-   <?php
+   </div>
+   </div>
+  <?php
 require 'connect.php';
   $query_run1=@mysqli_query($conn,"select * from users order by number desc");
 if(@mysqli_num_rows($query_run1)>0)
@@ -122,14 +147,27 @@ if(@mysqli_num_rows($query_run1)>0)
 $i++;
 
 ?>
-  
-    <div class="panel panel-default">
-      <div class="panel-heading2" id="shadow" style="font-size: 20px;"><?php echo $row1['username']."  ".$i." "?><?php echo $row1['number'] ?></div>
-      </div>
+    <div class="panel panel-default ">
+      <div class="panel-heading" id="shadow">
+      <div class="row">
+        <div class="colo"><?php echo $row1['username']?> </div>
+        <div class="colo"><?php echo $row1['zealid']?></div>
+        <div class="colo" style="margin-right: 0;"><?php echo $i?></div>
+     </div>
+   </div>
+   </div>
+
 <?php
-}}?>    
+}}?>
+
+   
+</div>
+<div class="col-sm-1 col-xs-1"></div>
+    </div>
+    </div>
+    <div class="col-sm-2 col-xs-4"></div>
     </div>
     </div>
 </div>
 </body>
-</html
+</html>

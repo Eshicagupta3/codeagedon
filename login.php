@@ -30,25 +30,57 @@ header('location: try.php');
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/default.css">
   <title>Login</title>
-<style>
-.btn1{
+  <style>
+  body,html{
+max-height: 100%;
+min-height: 100%;
+    
+}
+/*.btn1{
     background-color: White;
     border: none;
     color: Black;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
+}*/
+.bg{
+  background: url("assets/images/two.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  overflow-x: hidden;
+  overflow-y: hidden; 
+  height: 100%;
+  width: 100%;
 }
-
 /* Darker background on mouse-over */
 .btn1:hover {
-    background-color: RoyalBlue;
+  
+}
+@media screen and (max-width: 969px)
+{
+  .bg{
+    background-size:cover;
+    height: 100% ;
+    background-repeat: no-repeat;
+    
+  }
+}
+@media screen and (min-width: 100px) and (max-width:768px)
+{
+  .bg{
+    background-size:cover;
+    height: 100% ;
+    background-repeat: no-repeat;
+  }
+
 }
 </style>
 </head>
-<body>
+<body class="bg">
 
 <div class="wrapper">
+
   <div>
     <div class="cloud large cloud-1">
   <div></div><div></div><div></div><div></div>
@@ -91,16 +123,16 @@ header('location: try.php');
 <div class="overlay">
 <div class="container col-md-offset-4 col-md-4" style="margin-top:5%;">
   <div>
-      <h1 style=" font-size: 200%; color: cornflowerblue;"><img src="assets/images/bird3.gif" width="45%" height="20%">Log-In</h1>
+      <h1 style=" font-size: 200%; font-color:#1a237e;"><img src="assets/images/bird3.gif" width="45%" height="20%">Log-In</h1>
   </div>
   <div class="forms">
 <form class="form-horizontal" method="post" action="login1.php">
     <div class="form-group">
-      <label style="color: #E0E0E0;">Email:<span class="req">*</span></label>
+      <label style="color: black;">Email:<span class="req">*</span></label>
       <input class="form-control" type="email" placeholder="Enter your email" name="lemail" required>
     </div>
     <div class="form-group">
-      <label style="color: #E0E0E0;">Password:<span class="req">*</span></label>
+      <label style="color: black;">Password:<span class="req">*</span></label>
       <input class="form-control" type="password" placeholder="Enter your password" name="lpass" required>
     </div>
     <div class="form-group">
@@ -110,11 +142,13 @@ header('location: try.php');
       <label style="color: #E0E0E0;"><input type="checkbox" name="remember me">Remember Me</label>
       <span style="float: right; color: #E0E0E0;"><b><a href="#" style="color: #E0E0E0;">Forgot password?</a></b></span>
     </div>
+
 </form>
 </div>
 </div>
 </div>
 <div class="train"></div>
 </div>
+
 </body>
 </html>
