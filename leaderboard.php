@@ -13,7 +13,7 @@
   <title>Leaderboard</title>
   <style>
 
-      @font-face { font-family:Pokemon; src: url('Pokemon.ttf'); }
+      @font-face { font-family:assets/images/Pokemon; src: url('assets/images/Pokemon.ttf'); }
     
     body,html{
       height: 100%;
@@ -65,6 +65,10 @@
   will-change:background-position;
   padding-top:50px;
 }
+.colo{
+  color: white;
+  font-size: 15px;
+}
 @keyframes bird {
     0%   { left:1000px; right:0px; top:0px;}
     25%  { right:250px; left: 750px; top:0px;}
@@ -111,14 +115,14 @@
 }
 .colo{
   display: inline-block;
-  width: 30%;
+  width: 20%;
   margin: 0 2% 0 2%;
 }
 
 </style>
 </head>
 <body class="bg">
-
+<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 260%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 50"></span></a>
 <h1 align="center" class="heading" >Leaderboard</h1>
 <div class="birds"> <img src="assets/images/bird.gif"></div>
 <div class="container">
@@ -134,12 +138,13 @@
         <div class="colo">NAME </div>
         <div class="colo">ZEALID</div>
         <div class="colo" style="margin-right: 0;">POSITION</div>
+        <div class="colo" style="margin-right: 0;">QUESTION</div>
      </div>
    </div>
    </div>
   <?php
 require 'connect.php';
-  $query_run1=@mysqli_query($conn,"select * from users order by number desc");
+  $query_run1=@mysqli_query($conn,"select * from users order by number desc, datetime asc");
 if(@mysqli_num_rows($query_run1)>0)
 {$i=0;
     while($row1=@mysqli_fetch_assoc($query_run1))
@@ -150,9 +155,11 @@ $i++;
     <div class="panel panel-default ">
       <div class="panel-heading" id="shadow">
       <div class="row">
-        <div class="colo"><?php echo $row1['username']?> </div>
+        <div class="colo" ><?php echo $row1['username']?> </div>
         <div class="colo"><?php echo $row1['zealid']?></div>
         <div class="colo" style="margin-right: 0;"><?php echo $i?></div>
+        <div class="colo"><?php echo $row1['number']?></div>
+
      </div>
    </div>
    </div>

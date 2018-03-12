@@ -56,7 +56,7 @@ body,html{
    position: fixed;
      margin-left: -14%;
     bottom: 21px;
-    z-index: 2;
+    z-index: 10;
     width:30%; 
     height:24%;
 }
@@ -65,7 +65,7 @@ body,html{
     margin-left: -10%;
     bottom: -40px;
     width:30%; height:24%;
-    z-index: 2;
+    z-index: 12;
 }
 #img4{
    position: fixed;
@@ -90,12 +90,25 @@ body,html{
     right: 35px;
     z-index: 1;
 }
- @media only screen and (max-width: 969px) and (min-width: 768px){
-  .bg{
-    background: url("assets/images/main.jpg");
-   }
-
- }
+@media screen and (max-width: 1200px) and (min-width: 768px){
+    .bg{
+        background-image: url("assets/images/image2.png"),url("assets/images/bck.jpg");
+        background-size:contain,cover;
+        background-position: top center,center;
+        background-repeat:no-repeat,no-repeat; 
+        width: 100%;
+        margin-bottom:20%;
+        background-clip: content-box, border-box;
+    }
+}
+@media screen and (max-width: 1440px) and (min-width: 1279px){
+    .bg{
+        background:url("assets/images/main3.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        height: 100%;
+    }
+}
  @media screen and (max-width: 768px) and (min-width: 100px)
  {
     .bg{

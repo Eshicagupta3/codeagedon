@@ -77,8 +77,9 @@ min-height: 100%;
 }
 </style>
 </head>
-<body class="bg">
 
+<body class="bg">
+<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 210%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 50"></span>
 <div class="wrapper">
 
   <div>
@@ -142,7 +143,6 @@ min-height: 100%;
       <label style="color: #E0E0E0;"><input type="checkbox" name="remember me">Remember Me</label>
       <span style="float: right; color: #E0E0E0;"><b><a href="#" style="color: #E0E0E0;">Forgot password?</a></b></span>
     </div>
-
 </form>
 </div>
 </div>

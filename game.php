@@ -6,6 +6,9 @@ if($_SESSION['luser'])
 else{
     header('location: login.php');
 }
+
+$timestamp = time();
+$date=date("F d, Y h:i:s", $timestamp);
 $name=$_SESSION['luser'];
 $query="SELECT * FROM users WHERE email='$name'";
 $query_run=@mysqli_query($conn,$query);
@@ -106,6 +109,9 @@ $d = substr($url, strrpos($url, '?') + 1);
   overflow-x: hidden;">
        
            <?php
+ $query_run6=@mysqli_query($conn,"SELECT MAX(number) AS max FROM question");
+   $row6=@mysqli_fetch_assoc($query_run6);
+   $max= $row6['max'];
 $query_run1=@mysqli_query($conn,"select * from question where number=$c");
 if(@mysqli_num_rows($query_run1)>0)
 {
@@ -122,7 +128,7 @@ if($a1==$d)
     $_SESSION['sno']=$c;
     $s=$_SESSION['sno'];
 $name=$_SESSION['luser'];
-@mysqli_query($conn,"update users set number='$s' where email='$name'");
+@mysqli_query($conn,"update users set number='$s',datetime='$date' where email='$name'");
     header("location:game.php?");
 }
 }

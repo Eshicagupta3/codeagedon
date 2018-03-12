@@ -5,11 +5,16 @@
 <?php 
 $user=@mysqli_real_escape_string($conn, $_REQUEST['lemail']);
 $password=@mysqli_real_escape_string($conn, $_REQUEST['lpass']);
-$query="SELECT * FROM users WHERE email ='$user' AND password='$password'";
+
+$query="SELECT * FROM users WHERE email ='$user'";
 $query_run=@mysqli_query($conn,$query);
 if(@mysqli_num_rows($query_run)>0)
 {
-	   $row=mysqli_fetch_assoc($query_run);
+	   while($row=@mysqli_fetch_assoc($query_run)){
+	   $hash=$row['password'];
+	 
+	   if(password_verify($password, $hash))
+	   {
 $_SESSION['luser']=$user;
 $_SESSION['lusername']=$row['username'];
 $username=$row['username'];
@@ -19,13 +24,14 @@ setcookie('pass',$password,time()+60*60*7,"/");
 setcookie('username',$username,time()+60*60*7,"/");
 	header('location: game.php?');	
 }
-else
-{
-	
+}
+}
+
+
 	echo "<script type='text/javascript'>
             alert('user name or password incorrect');
             window.location.replace('login.php');
             </script>";
-}
+
 @mysqli_close($conn);
 ?>
