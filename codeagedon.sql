@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2018 at 08:41 PM
+-- Generation Time: Mar 12, 2018 at 09:48 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -75,27 +75,21 @@ CREATE TABLE `users` (
   `sno` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `zealid` varchar(30) NOT NULL,
-  `number` int(255) NOT NULL
+  `number` int(255) NOT NULL,
+  `datetime` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`sno`, `username`, `email`, `password`, `zealid`, `number`) VALUES
-(1, 'isha gupta', 'e@gmail.com', 'isha3', '', 7),
-(3, 'yash gupta', '', 'yash3', '', 2),
-(4, 'divya agrawal', '', 'divya3', '', 6),
-(5, 'ishika gupta', '', 'ishika3', '', 2),
-(6, 'ishika', 'eshicagupta3@gmail.com', 'ishika', '', 3),
-(7, 'ishu', 'ee@gmail.com', 'ishu', '', 1),
-(8, 'divya', 'eee@gmail.com', 'divya', '', 1),
-(9, 'aditi', 'a@gmail.com', 'aditi', '', 1),
-(10, 'cfvgbh', 'sd@xcv.com', 'vbnm', '', 1),
-(11, 'ishika', 'eeee@gmail.com', 'ishika', '123', 2),
-(12, 'isha', 'eeeeee@gmail.com', '456', '123', 2);
+INSERT INTO `users` (`sno`, `username`, `email`, `password`, `zealid`, `number`, `datetime`) VALUES
+(16, 'ishika', 'e@gmail.com', '$2y$10$CKcUw315ZF3B1K25BCldjeIMmG3P.ca51RnRJpsrYHFgNCFy4AqEW', 'dr34', 3, 'March 12, 2018 05:39:31'),
+(17, 'aditi', 'a@gmail.com', '$2y$10$j9oceqA3LyjR75Gty1lpJ.JlXrPt6ri87ri4.cgcy.0QZ9QcxxWOO', '345', 4, 'March 12, 2018 05:43:42'),
+(18, 'rachit', 'rachit@gmail.com', '$2y$10$GqqtI.fSouyuMgEnw9msz.TvDJoS0DJz2ZA2l3HiWoktsr2BvGaHO', 'gh5', 3, 'March 12, 2018 05:44:31'),
+(19, 'divya', 'divya@gmail.com', '$2y$10$pGZ9AgeXEUxMgG4C54wwDu18ohrawrEJsAoxe6QGh.SfBQuTENca6', '345', 5, 'March 12, 2018 05:51:58');
 
 --
 -- Indexes for dumped tables
@@ -137,7 +131,7 @@ ALTER TABLE `question`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
