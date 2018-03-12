@@ -38,40 +38,62 @@ body,html{
     min-height: 100%;
 }
 .bg{
-    background: url("assets/images/main.jpg");
-    background-size:cover; 
+  background-image: url("assets/images/i6.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+  background-size:cover;
+  overflow-x: hidden;
+  overflow-y: hidden; 
+  height: 90%;
+  width: 90%;
+}
+@media screen and (max-width: 969px)
+{
+  .bg{
+    background-size:cover;
+    width: 90% ;
+    height: 90%;
     background-repeat: no-repeat;
-    overflow-x: hidden;
-    overflow-y: hidden; 
+    background-position: center;
+    
+  }
 }
 #img1{
    position: fixed;
-    margin-left: -10%;
-    bottom: 90px;
+    margin-left: -11%;
+    bottom: 130px;
     width:30%; 
     height:24%;
     z-index: 3;
 }
 #img2{
    position: fixed;
-     margin-left: -14%;
-    bottom: 21px;
-    z-index: 10;
+     margin-left: -13%;
+    bottom: 34px;
+    z-index: 11;
     width:30%; 
     height:24%;
 }
 #img3{
    position: fixed;
-    margin-left: -10%;
+    margin-left: -11%;
     bottom: -40px;
     width:30%; height:24%;
-    z-index: 12;
+    z-index:12;
 }
 #img4{
    position: fixed;
     margin-left: -1%;
-    bottom: -120px;
-    width:150px; height:600px ;
+    bottom: -100px;
+    width:150px; height:640px ;
+}
+.i{
+    width: 25%;
+    height: 40%;
+    bottom: 0;
+    left:0;
+    position: fixed;
 }
 .shadowfilter {
     -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
@@ -90,37 +112,20 @@ body,html{
     right: 35px;
     z-index: 1;
 }
-@media screen and (max-width: 1200px) and (min-width: 768px){
-    .bg{
-        background-image: url("assets/images/image2.png"),url("assets/images/bck.jpg");
-        background-size:contain,cover;
-        background-position: top center,center;
-        background-repeat:no-repeat,no-repeat; 
-        width: 100%;
-        margin-bottom:20%;
-        background-clip: content-box, border-box;
-    }
+.imagecode{
+    padding-left: 15%;
 }
-@media screen and (max-width: 1440px) and (min-width: 1279px){
-    .bg{
-        background:url("assets/images/main3.jpg");
-        background-repeat: no-repeat;
-        background-size:cover;
-        height: 100%;
-    }
-}
- @media screen and (max-width: 768px) and (min-width: 100px)
- {
-    .bg{
 
-        background-image: url("assets/images/image2.png"),url("assets/images/bck.jpg");
-        background-size:contain,cover;
-        background-position: top center,center;
-        background-repeat:no-repeat,no-repeat; 
-        width: 100%;
-        margin-bottom:20%;
-        background-clip: content-box, border-box;
-    }
+ @media only screen and (max-width: 768px) and (min-width: 100px)
+ {
+    
+  .bg{
+    background-size:cover;
+    width: 90% ;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
     #img2{
 margin-left: -25%;
 width: 50%;
@@ -137,7 +142,7 @@ width: 50%;
 height: 20%;
 }
 #img4{
-    margin-left: 20%
+    margin-left: 25%
 height:10%;
 width: 15%;
 }
@@ -149,13 +154,15 @@ width: 15%;
 </style>
 </head>
 <body class="bg">
+    <div align="center">
+    <img src="assets/images/image2.png" class="imagecode" width="80%" height="50%"></div>
     <div class="row">
-    <div class="col-sm-4 col-xs-4"></div>
-    <div class="col-sm-4 col-xs-4">
+    <div class="col-sm-5 col-xs-4"></div>
+    <div class="col-sm-3 col-xs-4">
     <div class="col-sm-3 col-xs-2"></div>
     <div class="col-sm-6 col-xs-4">
     <a href="login.php"><img src="assets/images/wood32.png" id="img2" class="shadowfilter"></a>
-    <img src="assets/images/img.png" id="img4">
+    <img src="assets/images/img.png" id="img4" >
     <a href="signup.php"><img src="assets/images/wood31.png" id="img1" class="shadowfilter"></a>
     <a href="leaderboard.php"><img src="assets/images/wood34.png" id="img3" class="shadowfilter"></a></div><div class="col-sm-3 col-xs-2"></div>
 </div>

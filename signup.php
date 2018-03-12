@@ -64,7 +64,7 @@ width: 100%;
 </style>
 </head>
 <body class="bg">
-<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 210%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 50"></span></a>
+<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 210%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 30"></span></a>
 <div class="snowflakes" aria-hidden="true">
   <div class="snowflake">
   ❄

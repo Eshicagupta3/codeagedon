@@ -79,7 +79,7 @@ min-height: 100%;
 </head>
 
 <body class="bg">
-<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 210%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 50"></span>
+<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 210%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 20"></span></a>
 <div class="wrapper">
 
   <div>

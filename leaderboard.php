@@ -1,7 +1,4 @@
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +20,6 @@
       .panel-heading:hover, .panel-heading:active, .panel-heading:not([class*="collapsed"]) {
       background-color: #5c6bc0;
       height:40px;
-      font-family:Pokemon Solid;
       padding: 0px;
 }
 
@@ -122,7 +118,7 @@
 </style>
 </head>
 <body class="bg">
-<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 260%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 50"></span></a>
+<a href="home.php"><span class="glyphicon glyphicon-home" style="font-size: 260%;color:#ffffff; margin-left: 2%; margin-top: 3%; z-index: 20"></span></a>
 <h1 align="center" class="heading" >Leaderboard</h1>
 <div class="birds"> <img src="assets/images/bird.gif"></div>
 <div class="container">
