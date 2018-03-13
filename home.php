@@ -152,19 +152,18 @@ width: 15%;
     top:30%;
     right: 0%;
  }
- .imagecode{
-    padding-top: 15%;
-    height: 100%;
-    width: 100%;
-   
- }
-
+  .imagecode{
+   padding-left: 15%;
+   margin-top: 5%;
+     width:110%;
+     height:45vh;
+}
 }
 </style>
 </head>
 <body class="bg">
     <div align="center">
-    <img src="assets/images/image2.png" class="imagecode"></div>
+    <img src="assets/images/image4.png" class="imagecode"></div>
     <div class="row">
     <div class="col-sm-5 col-xs-4"></div>
     <div class="col-sm-3 col-xs-4">

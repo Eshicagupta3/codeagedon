@@ -34,12 +34,12 @@ header('location: try.php');
   background: url("assets/images/one.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 body,html{
 max-height: 100%;
 min-height: 100%;
-overflow-x: hidden;
-overflow-y: hidden; 
 height: 100%;
 width: 100%;
 }
@@ -49,6 +49,8 @@ width: 100%;
     background-size:cover;
     height: 100% ;
     background-repeat: no-repeat;
+    overflow-y: scroll;
+  overflow-x: hidden;
     
   }
 }
@@ -58,6 +60,8 @@ width: 100%;
     background-size:cover;
     height: 100% ;
     background-repeat: no-repeat;
+    overflow-y: scroll;
+  overflow-x: hidden;
   }
 
 }

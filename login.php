@@ -51,6 +51,7 @@ min-height: 100%;
   overflow-x: hidden;
   overflow-y: hidden; 
   height: 100%;
+
   width: 100%;
 }
 /* Darker background on mouse-over */
@@ -61,8 +62,10 @@ min-height: 100%;
 {
   .bg{
     background-size:cover;
-    height: 100% ;
+    height: 100vh ;
     background-repeat: no-repeat;
+    overflow-y: scroll;
+  overflow-x: hidden;
     
   }
 }
@@ -70,8 +73,10 @@ min-height: 100%;
 {
   .bg{
     background-size:cover;
-    height: 100% ;
+    height: 100vh ;
     background-repeat: no-repeat;
+    overflow-y: scroll;
+  overflow-x: hidden;
   }
 
 }
@@ -139,10 +144,7 @@ min-height: 100%;
     <div class="form-group">
       <button class="btn btn-primary btn-block" type="submit"><label style="color: #E0E0E0;">Login</label></button>
     </div>
-    <div class="form-group">
-      <label style="color: #E0E0E0;"><input type="checkbox" name="remember me">Remember Me</label>
-      <span style="float: right; color: #E0E0E0;"><b><a href="#" style="color: #E0E0E0;">Forgot password?</a></b></span>
-    </div>
+    
 </form>
 </div>
 </div>

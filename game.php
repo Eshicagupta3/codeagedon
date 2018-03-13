@@ -7,6 +7,7 @@ else{
     header('location: login.php');
 }
 
+
 $timestamp = time();
 $date=date("F d, Y h:i:s", $timestamp);
 $name=$_SESSION['luser'];
@@ -76,7 +77,7 @@ $d = substr($url, strrpos($url, '?') + 1);
 .btn1{
   bottom: 0;
   position: fixed;
-  right: 6%;
+  right: 40%;
   z-index: 15;
 }
 .footer {
@@ -142,7 +143,7 @@ $name=$_SESSION['luser'];
 }
 }
 else{
-  echo "congrats u complete all levels!!";
+  echo "Congrats You Completed All Levels!!";
 }
 ?> 
 <?php
@@ -185,12 +186,15 @@ echo "<br><br>";
 
         </div>
         <div class="modal-body">
-          <ul  style="color: black;"><li><p>Answers are in word and numbers only .</p></li>
-          <li><p>Answer should be in one word. If you think there can be two words then combine them to make a single word.</p></li>
-          <li><p>Numbered answered are accepted. If you think the answer is a date then simply right it ex- 10 march 2018 can be written 10032018..</p></li>
-          <li><p>Don't use special characters while answering like *, + , - .</p></li>
-          <li><p>Answers are to be eneterd in the url only after '?'.</p></li>
-          
+          <ul  style="color: black;">
+            <li><p>Participants are requested not to use an alias while registering for this event.</p></li>
+            <li><p>Answers are in word and numbers only .</p></li>
+            <li><p>Word answers should be entered in lower case without including white spaces .</p></li>
+            <li><p>If you think your answer contains more than one word, then combine them to make a single word without giving whitespace .</p></li>
+            <li><p>Numeric answers are accepted. If you think the answer is a date then simply write it in the format given below:
+              <br>Example- 10 march 2018 can be written as 10032018 .</p></li>
+            <li><p>Don't use any special characters(*,+,/,- etc) while answering .</p></li>
+            <li><p>Answers are to be appended in the URL only after '?' .</p></li>
           </ul>
         </div>
         <div class="modal-footer">
@@ -204,7 +208,9 @@ echo "<br><br>";
     <div class="text-center">
      
   
-      <a href="leaderboard.php" style="color: white;"><span class="fa fa-trophy" data-toggle="tooltip" data-placement="top" title="Leaderboard"></span></a>&nbsp;<a href="logout.php" style="color: white;"><span class="fa fa-sign-out" data-toggle="tooltip" data-placement="top" title="Logout"></span></a>
+      <a href="leaderboard.php" style="color: white;"><span class="fa fa-trophy" data-toggle="tooltip" data-placement="top" title="Leaderboard"></span></a>&nbsp;
+      <a href="logout.php" style="color: white;"><span class="fa fa-sign-out" data-toggle="tooltip" data-placement="top" title="Logout"></span></a>
+      <a href="facebook.com/jssmmil/" style="color: white;" target="_blank"><span class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Forum"></span></a>
     </div>
 
 </footer>
