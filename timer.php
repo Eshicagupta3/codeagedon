@@ -116,7 +116,7 @@ color: black;
 </div>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("15 march, 2018 00:57:10").getTime();
+var countDownDate = new Date("14 march, 2018 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

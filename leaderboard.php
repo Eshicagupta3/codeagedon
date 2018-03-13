@@ -19,7 +19,7 @@
 
       .panel-heading:hover, .panel-heading:active, .panel-heading:not([class*="collapsed"]) {
       background-color: #5c6bc0;
-      height:40px;
+      height:50px;
       padding: 0px;
 }
 
@@ -61,10 +61,11 @@
   will-change:background-position;
   padding-top:50px;
 }
-.colo{
+.colo,.colo1,.colo2{
   color: white;
-  font-size: 15px;
+  font-size: 1.5em;
 }
+
 @keyframes bird {
     0%   { left:1000px; right:0px; top:0px;}
     25%  { right:250px; left: 750px; top:0px;}
@@ -111,10 +112,20 @@
 }
 .colo{
   display: inline-block;
-  width: 20%;
+  width: 29% !important;
   margin: 0 2% 0 2%;
 }
-
+.colo1{
+  display: inline-block;
+  width: 19%;
+  margin: 0 2% 0 2%;
+}
+.colo2{
+  display: inline-block;
+  width: 17%;
+  line-height: 
+  margin: 0 2% 0 2%;
+}
 </style>
 </head>
 <body class="bg">
@@ -132,9 +143,9 @@
       <div class="panel-heading" id="shadow">
       <div class="row">
         <div class="colo">NAME </div>
-        <div class="colo">ZEALID</div>
-        <div class="colo" style="margin-right: 0;">POSITION</div>
-        <div class="colo" style="margin-right: 0;">QUESTION</div>
+        <div class="colo2">ZEALID</div>
+        <div class="colo1" style="margin-right: 0;">POSITION</div>
+        <div class="colo1" style="margin-right: 0;">QUESTION</div>
      </div>
    </div>
    </div>
@@ -152,9 +163,9 @@ $i++;
       <div class="panel-heading" id="shadow">
       <div class="row">
         <div class="colo" ><?php echo $row1['username']?> </div>
-        <div class="colo"><?php echo $row1['zealid']?></div>
-        <div class="colo" style="margin-right: 0;"><?php echo $i?></div>
-        <div class="colo"><?php echo $row1['number']?></div>
+        <div class="colo2"><?php echo $row1['zealid']?></div>
+        <div class="colo1" style="margin-right: 0;"><?php echo $i?></div>
+        <div class="colo1"><?php echo $row1['number']?></div>
 
      </div>
    </div>

@@ -32,6 +32,7 @@ input{
     bottom: 0;
     opacity: 0.8;
     z-index: 2;
+    overflow-y: scroll;
 }
 .cloud {
   -webkit-animation: clouds 60s infinite linear;
@@ -275,7 +276,7 @@ input{
 }
 .wrapper {
   margin: auto;
-  overflow: hidden !important;
+  overflow-x: hidden; 
 }
 .cart {
   position: fixed;
@@ -292,18 +293,7 @@ input{
   0% {background-position: 0px 0px;}
   100% {background-position:  100% 0px;}
 }
-.overlay{
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    z-index: 2;
-}
+
 .snow{
   position: fixed;
   bottom: 0px;

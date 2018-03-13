@@ -30,27 +30,24 @@ header('location: try.php');
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/default.css">
   <style>
+  body,html{
+max-height: 100%;
+min-height: 100%;
+}
 .bg{
   background: url("assets/images/one.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: hidden; 
+  overflow-y: scroll; 
 }
-body,html{
-max-height: 100%;
-min-height: 100%;
-height: 100%;
-width: 100%;
-}
+
 @media screen and (max-width: 969px)
 {
   .bg{
     background-size:cover;
     height: 100% ;
     background-repeat: no-repeat;
-    overflow-y: scroll;
-  overflow-x: hidden;
     
   }
 }
@@ -60,9 +57,6 @@ width: 100%;
     background-size:cover;
     height: 100% ;
     background-repeat: no-repeat;
-    overflow-y: scroll;
-  overflow-x: hidden;
-  }
 
 }
 </style>
@@ -111,7 +105,7 @@ width: 100%;
   <form class="form-horizontal" method="post" action="register.php">
     <div class="form-group">
       <label style="color: #1a237e;">Username:<span class="req">*</span></label>
-      <input class="form-control" type="text" name="fname" placeholder="Enter Username" required>
+      <input class="form-control" type="text" name="fname" placeholder="Enter Username" maxlength="15" required>
     </div>
   
     <div class="form-group">

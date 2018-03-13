@@ -142,7 +142,7 @@ min-height: 100%;
       <input class="form-control" type="password" placeholder="Enter your password" name="lpass" required>
     </div>
     <div class="form-group">
-      <button class="btn btn-primary btn-block" type="submit"><label style="color: #E0E0E0;">Login</label></button>
+      <button class="btn btn-primary btn-block" type="submit"><label style="color: white;">Login</label></button>
     </div>
     
 </form>
