@@ -114,6 +114,8 @@ body,html{
 }
 .imagecode{
     padding-left: 15%;
+    width: 100%;
+    height:90%;
 }
 
  @media only screen and (max-width: 768px) and (min-width: 100px)
@@ -150,12 +152,19 @@ width: 15%;
     top:30%;
     right: 0%;
  }
+ .imagecode{
+    padding-top: 15%;
+    height: 100%;
+    width: 100%;
+   
+ }
+
 }
 </style>
 </head>
 <body class="bg">
     <div align="center">
-    <img src="assets/images/image2.png" class="imagecode" width="80%" height="50%"></div>
+    <img src="assets/images/image2.png" class="imagecode"></div>
     <div class="row">
     <div class="col-sm-5 col-xs-4"></div>
     <div class="col-sm-3 col-xs-4">

@@ -22,8 +22,8 @@ echo "<form method='post' name='delete1' action=''>
     </form>";
     	echo $n;
     	echo "- ques: ";
-    	echo $q;
-    	echo"<br>";
+    	echo $q." ";
+    	echo "<br>";
     	echo "ans: ";
     	echo $a;
 echo "<br><hr>";

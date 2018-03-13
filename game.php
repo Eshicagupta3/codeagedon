@@ -73,9 +73,15 @@ $d = substr($url, strrpos($url, '?') + 1);
   position: relative;
   overflow:hidden;
 }
+.btn1{
+  bottom: 0;
+  position: fixed;
+  right: 6%;
+  z-index: 15;
+}
 .footer {
     position: fixed;
-    
+   
     bottom: 0;
     width: 100%;
     color: white;
@@ -108,6 +114,10 @@ $d = substr($url, strrpos($url, '?') + 1);
  
   overflow-x: hidden;">
        
+       
+
+
+
            <?php
  $query_run6=@mysqli_query($conn,"SELECT MAX(number) AS max FROM question");
    $row6=@mysqli_fetch_assoc($query_run6);
@@ -121,8 +131,7 @@ $a1=$row1['ans'];
 ?>
 
 <?php
-
-if($a1==$d)
+if (password_verify($d, $a1))
 {
     $c=$c+1;
     $_SESSION['sno']=$c;
@@ -161,14 +170,42 @@ echo "<br><br>";
 
 </body>
 </html>
-<span class="log">&nbsp;&nbsp;<?php  echo 'hey '.$_SESSION['lusername']."  "; ?></span>
+<span class="log">&nbsp;&nbsp;<?php  echo 'Hey '.$_SESSION['lusername']."  "; ?></span>
+ <button type="button" class="btn btn-sm btn1" data-toggle="modal" data-target="#myModal"  data-placement="top" title="Rules" style="background-color: transparent;"><img src="assets/images/document.png"></button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" &times;></button>
+          <h3 class="modal-title" align="center"  style="color: black;">Rules</h3>
+
+        </div>
+        <div class="modal-body">
+          <ul  style="color: black;"><li><p>Answers are in word and numbers only .</p></li>
+          <li><p>Answer should be in one word. If you think there can be two words then combine them to make a single word.</p></li>
+          <li><p>Numbered answered are accepted. If you think the answer is a date then simply right it ex- 10 march 2018 can be written 10032018..</p></li>
+          <li><p>Don't use special characters while answering like *, + , - .</p></li>
+          <li><p>Answers are to be eneterd in the url only after '?'.</p></li>
+          
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 <footer class="footer">
     <div class="text-center">
+     
+  
       <a href="leaderboard.php" style="color: white;"><span class="fa fa-trophy" data-toggle="tooltip" data-placement="top" title="Leaderboard"></span></a>&nbsp;<a href="logout.php" style="color: white;"><span class="fa fa-sign-out" data-toggle="tooltip" data-placement="top" title="Logout"></span></a>
     </div>
+
 </footer>
-<script>
-/*$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
-});*/
-</script>
+
